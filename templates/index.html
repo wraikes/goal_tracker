@@ -9,7 +9,7 @@
 		Please enter your progress:
 	</p>
 	<p>
-		<form method="post">
+		<form action="\progress" method="post">
 			Coding (Enter Number of Hours): <input type="integer" name="coding">
 			<br>
 			Reading (Enter Number of Completed Books): <input type="integer" name="reading">
@@ -20,8 +20,11 @@
 		</form>
 	</p>
 	<p>
-		Or check on your progress!
-		<input type="submit" name="progress">
+		<form action="\progress" method="get">
+			Or check on your progress!
+			<br>
+			<input type="submit" name="progress" value="My Progress">
+		</form>
 	</p>
 </body>
 </html>
