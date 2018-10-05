@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-
+import sqlite3
 
 app = Flask(__name__)
 
@@ -11,8 +11,15 @@ def index():
 
 @app.route("/progress", methods=["GET", "POST"])
 def progress():
-	if request.form == 'post':
-		pass		
+	if request.method == "POST":
+		with sqlite3.connect('progress.db') as conn:
+			c = conn.cursor()
+			if float(request.form['coding']) > 0:
+				c.execute('INSERT INTO progress (name, date, amount) VALUES (?, ?, ?)', ('CS/MATH', date(now), request.form['coding']))
+			if float(request.form['reading']) > 0:
+				c.execute('INSERT INTO progress (name, date, amount) VALUES (?, ?, ?)', ('Reading', date(now), request.form['reading']))
+			if float(request.form['savings']) > 0:
+				c.execute('INSERT INTO progress (name, date, amount) VALUES (?, ?, ?)', ('Savings', date(now), request.form['savings']))
 
 	return render_template("progress.html")
 

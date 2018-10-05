@@ -19,19 +19,16 @@ INSERT INTO goals (name, length, amount, amt_type) VALUES
 CREATE TABLE progress (
 	entry_id integer PRIMARY KEY,
 	name text NOT NULL,
-	date text NOT NULL,
-	amount read NOT NULL
+	input_date text NOT NULL,
+	amount real NOT NULL
 );
 
 
-INSERT INTO progress (name, date, amount) VALUES
+INSERT INTO progress (name, input_date, amount) VALUES
 	("CS/MATH", datetime('now'), 0),
 	("Readings", datetime('now'), 0),
 	("Savings", datetime('now'), 250)
 ;
 
 
-.save goals.db
-.save progress.db
-.quit
-
+.save goal_tracker.db
