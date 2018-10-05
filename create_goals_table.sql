@@ -1,5 +1,9 @@
 --Create tables to record all goals, and starting progress.
 
+DROP TABLE IF EXISTS goals;
+DROP TABLE IF EXISTS progress;
+
+
 CREATE TABLE goals (
 	goal_id integer PRIMARY KEY,
 	name text NOT NULL UNIQUE,
@@ -25,9 +29,9 @@ CREATE TABLE progress (
 
 
 INSERT INTO progress (name, input_date, amount) VALUES
-	("CS/MATH", datetime('now'), 0),
-	("Readings", datetime('now'), 0),
-	("Savings", datetime('now'), 250)
+	("CS/MATH", date('now'), 0),
+	("Readings", date('now'), 0),
+	("Savings", date('now'), 250)
 ;
 
 
