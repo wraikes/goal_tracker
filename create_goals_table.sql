@@ -14,8 +14,9 @@ CREATE TABLE goals (
 
 
 INSERT INTO goals (name, length, amount, amt_type) VALUES 
-	("CS/Math", "Monthly", 20, "hours"),
+	("CS/MATH", "Monthly", 20, "hours"),
 	("Reading", "Monthly", 1, "books"),
+	("Exercise", "Weekly", 2, "times"),
 	("Savings", "None", 10000, "dollars")
 ;
 
@@ -31,6 +32,7 @@ CREATE TABLE progress (
 INSERT INTO progress (name, input_date, amount) VALUES
 	("CS/MATH", date('now'), 0),
 	("Readings", date('now'), 0),
+	("Exercise", date('now'), 0),
 	("Savings", date('now'), 250)
 ;
 

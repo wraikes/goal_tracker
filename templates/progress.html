@@ -5,20 +5,68 @@
 </head>
 <body>
 	<p>My Progress Thus Far!</p>
-	<h3>Coding</h3>
+	
+	<h4>Coding</h4>
 	<table name='coding'>
 		<tr>
-			<th>Total</th>
 			<th>Current Month's Progress</th>
 			<th>Average Per Day Progress</th>
 			<th>Monthly Target</th>
 			<th>Delta</th>
 		</tr>
 		<tr>
-			{% for i in coding_vals %}
-				<td>{{ coding_vals[i] }}</td>
-			{% endfor %}
+			<td>{{ coding_vals['current'] }}</td>
+			<td>{{ coding_vals['avg'] }}</td>
+			<td>{{ coding_vals['goal'] }}</td>
+			<td>{{ coding_vals['delta'] }}</td>
 		</tr>
 	</table>
+	
+	<h4>Reading</h4>
+	<table name='book'>
+		<tr>
+			<th>Current Month's Progress</th>
+			<th>Monthly Target</th>
+		</tr>
+		<tr>
+			<td>{{ book_vals['current'] }}</td>
+			<td>{{ book_vals['goal'] }}</td>
+		</tr>
+	</table>
+
+	<h4>Exercise</h4>
+	<table name='exercise'>
+		<tr>
+			<th>Current Week's Progress</th>
+			<th>Weekly Target</th>
+			<th>Delta</th>
+		</tr>
+		<tr>
+			<td>{{ ex_vals['current'] }}</td>
+			<td>{{ ex_vals['goal'] }}</td>
+			<td>{{ ex_vals['delta'] }}</td>
+		</tr>
+	</table>
+	
+	<h4>Savings</h4>	
+	<table name='saving'>
+		<tr>
+			<th>Total Saved</th>
+			<th>Average Per Month</th>
+			<th>Total Target</th>
+			<th>Delta</th>
+		</tr>
+		<tr>
+			<td>{{ saving_vals['total'] }}</td>
+			<td>{{ saving_vals['avg'] }}</td>
+			<td>{{ saving_vals['goal'] }}</td>
+			<td>{{ saving_vals['delta'] }}</td>
+		</tr>
+	</table>
+	<p>
+		<form action="\" method="get">
+			<input type="submit" name="submit" value="Go Back">
+		</form>
+	</p>
 </body>
 </html>
