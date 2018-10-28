@@ -16,68 +16,56 @@
 <body>
 	<p>My Progress Thus Far!</p>
 	
-	<h4>Coding</h4>
 	<div class="container">
-	<table class="table table-bordered">
-	  <thead>
+
+	<h4>Coding</h4>
+	<table class="table table-bordered" name='coding'>
+	  	<thead>
 	    <tr>
-	      <th scope="col">#ok</th>
-	      <th scope="col">First</th>
-	      <th scope="col">Last</th>
-	      <th scope="col">Handle</th>
+	      <th scope="col">Current Month's Progress</th>
+	      <th scope="col">Average Per Day Progress</th>
+	      <th scope="col">Monthly Target</th>
+	      <th scope="col">Delta</th>
 	    </tr>
-	  </thead>
-	  <tbody>
+	  	</thead>
+	  	<tbody>
 	    <tr>
-	      <th scope="row">1</th>
-	      <td>Mark</td>
-	      <td>Otto</td>
-	      <td>@mdo</td>
-	    </tr>
-	    <tr>
-	      <th scope="row">2</th>
-	      <td>Jacob</td>
-	      <td>Thornton</td>
-	      <td>@fat</td>
-	    </tr>
-	    <tr>
-	      <th scope="row">3</th>
-	      <td>Larry</td>
-	      <td>the Bird</td>
-	      <td>@twitter</td>
-	    </tr>
-	  </tbody>
-	</table>
-	</div>
-<!-- 	<table name='coding'>
-		<tr>
-			<th>Current Month's Progress</th>
-			<th>Average Per Day Progress</th>
-			<th>Monthly Target</th>
-			<th>Delta</th>
-		</tr>
-		<tr>
 			<td>{{ coding_vals['current'] }}</td>
 			<td>{{ coding_vals['avg'] }}</td>
 			<td>{{ coding_vals['goal'] }}</td>
 			<td>{{ coding_vals['delta'] }}</td>
-		</tr>
-	</table> -->
-	
+	    </tr>
+	  	</tbody>
+	</table>
+	</div>
+
+	<br>
+
+	<div class="container">
 	<h4>Reading</h4>
-	<table name='book'>
+
+	<table class="table table-bordered" name='book'>
+		<thead>
 		<tr>
-			<th>Current Month's Progress</th>
-			<th>Monthly Target</th>
+			<th scope="col">Current Month's Progress</th>
+			<th scope='col'>Monthly Target</th>
 		</tr>
+		</thead>
+		<tbody>
 		<tr>
 			<td>{{ book_vals['current'] }}</td>
 			<td>{{ book_vals['goal'] }}</td>
 		</tr>
+		</tbody>
 	</table>
+	</div>
+	
+	<br>
 
+	<div class='container'>
 	<h4>Exercise</h4>
-	<table name='exercise'>
+	
+	<table class="table table-bordered" name='exercise'>
 		<tr>
 			<th>Current Week's Progress</th>
 			<th>Weekly Target</th>
@@ -89,9 +77,14 @@
 			<td>{{ ex_vals['delta'] }}</td>
 		</tr>
 	</table>
-	
+	</div>
+
+	<br>
+
+	<div class='container'>
+
 	<h4>Savings</h4>	
-	<table name='saving'>
+	<table class='table table-bordered' name='saving'>
 		<tr>
 			<th>Total Saved</th>
 			<th>Average Per Month</th>
@@ -105,12 +98,17 @@
 			<td>{{ saving_vals['delta'] }}</td>
 		</tr>
 	</table>
+	</div>
+
+	<br>
+
+	<div class='container'>
 	<p>
 		<form action="\" method="get">
 			<input type="submit" name="submit" value="Go Back">
 		</form>
 	</p>
-
+	</div>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
