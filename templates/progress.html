@@ -14,100 +14,107 @@
 	<title>My Progress</title>
 </head>
 <body>
-	<p>My Progress Thus Far!</p>
 	
-	<div class="container">
-
-	<h4>Coding</h4>
-	<table class="table table-bordered" name='coding'>
-	  	<thead>
-	    <tr>
-	      <th scope="col">Current Month's Progress</th>
-	      <th scope="col">Average Per Day Progress</th>
-	      <th scope="col">Monthly Target</th>
-	      <th scope="col">Delta</th>
-	    </tr>
-	  	</thead>
-	  	<tbody>
-	    <tr>
-			<td>{{ coding_vals['current'] }}</td>
-			<td>{{ coding_vals['avg'] }}</td>
-			<td>{{ coding_vals['goal'] }}</td>
-			<td>{{ coding_vals['delta'] }}</td>
-	    </tr>
-	  	</tbody>
-	</table>
+	<div class='container'>
+		<h1>My Progress Thus Far!</h1>
 	</div>
 
+	<br>
 	<br>
 
 	<div class="container">
-	<h4>Reading</h4>
 
-	<table class="table table-bordered" name='book'>
-		<thead>
-		<tr>
-			<th scope="col">Current Month's Progress</th>
-			<th scope='col'>Monthly Target</th>
-		</tr>
-		</thead>
-		<tbody>
-		<tr>
-			<td>{{ book_vals['current'] }}</td>
-			<td>{{ book_vals['goal'] }}</td>
-		</tr>
-		</tbody>
-	</table>
+		<h5>Coding</h5>
+		<table class="table table-bordered" name='coding'>
+		  	<thead>
+		    <tr>
+		      <th scope="col">Current Month's Progress</th>
+		      <th scope="col">Average Per Day Progress</th>
+		      <th scope="col">Monthly Target</th>
+		      <th scope="col">Delta</th>
+		    </tr>
+		  	</thead>
+		  	<tbody>
+		    <tr>
+				<td>{{ coding_vals['current'] }}</td>
+				<td>{{ coding_vals['avg'] }}</td>
+				<td>{{ coding_vals['goal'] }}</td>
+				<td>{{ coding_vals['delta'] }}</td>
+		    </tr>
+		  	</tbody>
+		</table>
+	</div>
+
+	<br>
+
+	<div class="container" class='col-10'>
+		<h5>Reading</h5>
+
+		<table class="table table-bordered" name='book'>
+			<thead>
+			<tr>
+				<th scope="col">Current Month's Progress</th>
+				<th scope='col'>Monthly Target</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+				<td>{{ book_vals['current'] }}</td>
+				<td>{{ book_vals['goal'] }}</td>
+			</tr>
+			</tbody>
+		</table>
 	</div>
 	
 	<br>
 
 	<div class='container'>
-	<h4>Exercise</h4>
+		<h5>Exercise</h5>
+		
+		<table class="table table-bordered" name='exercise'>
+			<tr>
+				<th>Current Week's Progress</th>
+				<th>Weekly Target</th>
+				<th>Delta</th>
+			</tr>
+			<tr>
+				<td>{{ ex_vals['current'] }}</td>
+				<td>{{ ex_vals['goal'] }}</td>
+				<td>{{ ex_vals['delta'] }}</td>
+			</tr>
+		</table>
+	</div>
+
+	<br>
+
+	<div class='container'>
+
+		<h5>Savings</h5>	
+		<table class='table table-bordered' name='saving'>
+			<tr>
+				<th>Total Saved</th>
+				<th>Average Per Month</th>
+				<th>Total Target</th>
+				<th>Delta</th>
+			</tr>
+			<tr>
+				<td>{{ saving_vals['total'] }}</td>
+				<td>{{ saving_vals['avg'] }}</td>
+				<td>{{ saving_vals['goal'] }}</td>
+				<td>{{ saving_vals['delta'] }}</td>
+			</tr>
+		</table>
+	</div>
+	</div>
 	
-	<table class="table table-bordered" name='exercise'>
-		<tr>
-			<th>Current Week's Progress</th>
-			<th>Weekly Target</th>
-			<th>Delta</th>
-		</tr>
-		<tr>
-			<td>{{ ex_vals['current'] }}</td>
-			<td>{{ ex_vals['goal'] }}</td>
-			<td>{{ ex_vals['delta'] }}</td>
-		</tr>
-	</table>
-	</div>
-
 	<br>
 
 	<div class='container'>
-
-	<h4>Savings</h4>	
-	<table class='table table-bordered' name='saving'>
-		<tr>
-			<th>Total Saved</th>
-			<th>Average Per Month</th>
-			<th>Total Target</th>
-			<th>Delta</th>
-		</tr>
-		<tr>
-			<td>{{ saving_vals['total'] }}</td>
-			<td>{{ saving_vals['avg'] }}</td>
-			<td>{{ saving_vals['goal'] }}</td>
-			<td>{{ saving_vals['delta'] }}</td>
-		</tr>
-	</table>
-	</div>
-
-	<br>
-
-	<div class='container'>
-	<p>
-		<form action="\" method="get">
-			<input type="submit" name="submit" value="Go Back">
-		</form>
-	</p>
+		<p>
+			<form action="\" method="get">
+				<input type="submit" name="submit" value="Go Back">
+			</form>
+		</p>
 	</div>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
