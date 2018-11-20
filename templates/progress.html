@@ -8,14 +8,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+
+	<!-- My CSS file -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/goal_tracker.css') }}" />
 
 
 	<title>My Progress</title>
 </head>
+
+
 <body>
-	
-	<div class='container'>
+	<div class='header'>
 		<h1>My Progress Thus Far!</h1>
 	</div>
 
@@ -25,14 +29,14 @@
 	<div class="container">
 
 		<h5>Coding</h5>
-		<table class="table table-bordered" name='coding'>
+		<table class="table table-bordered" id='coding'>
 		  	<thead>
-		    <tr>
-		      <th scope="col">Current Month's Progress</th>
-		      <th scope="col">Average Per Day Progress</th>
-		      <th scope="col">Monthly Target</th>
-		      <th scope="col">Delta</th>
-		    </tr>
+			    <tr>
+			      <th scope="col">Current Month's Progress</th>
+			      <th scope="col">Average Per Day Progress</th>
+			      <th scope="col">Monthly Target</th>
+			      <th scope="col">Delta</th>
+			    </tr>
 		  	</thead>
 		  	<tbody>
 		    <tr>
@@ -52,10 +56,10 @@
 
 		<table class="table table-bordered" name='book'>
 			<thead>
-			<tr>
-				<th scope="col">Current Month's Progress</th>
-				<th scope='col'>Monthly Target</th>
-			</tr>
+				<tr>
+					<th scope="col">Current Month's Progress</th>
+					<th scope='col'>Monthly Target</th>
+				</tr>
 			</thead>
 			<tbody>
 			<tr>
@@ -72,11 +76,13 @@
 		<h5>Exercise</h5>
 		
 		<table class="table table-bordered" name='exercise'>
-			<tr>
-				<th>Current Week's Progress</th>
-				<th>Weekly Target</th>
-				<th>Delta</th>
-			</tr>
+			<thead>
+				<tr>
+					<th>Current Week's Progress</th>
+					<th>Weekly Target</th>
+					<th>Delta</th>
+				</tr>
+			</thead>
 			<tr>
 				<td>{{ ex_vals['current'] }}</td>
 				<td>{{ ex_vals['goal'] }}</td>
@@ -91,12 +97,14 @@
 
 		<h5>Savings</h5>	
 		<table class='table table-bordered' name='saving'>
-			<tr>
-				<th>Total Saved</th>
-				<th>Average Per Month</th>
-				<th>Total Target</th>
-				<th>Delta</th>
-			</tr>
+			<thead>
+				<tr>
+					<th>Total Saved</th>
+					<th>Average Per Month</th>
+					<th>Total Target</th>
+					<th>Delta</th>
+				</tr>
+			</thead>
 			<tr>
 				<td>{{ saving_vals['total'] }}</td>
 				<td>{{ saving_vals['avg'] }}</td>
@@ -109,10 +117,12 @@
 	
 	<br>
 
-	<div class='container'>
+	<div class='container' id='button'>
+
 		<p>
 			<form action="\" method="get">
-				<input type="submit" name="submit" value="Go Back">
+				<button type="button" class="btn btn-primary">Primary</button>
+				<!-- input type="submit" name="submit" value="Back" -->
 			</form>
 		</p>
 	</div>

@@ -8,21 +8,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 
-
+    <!-- My CSS file -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/goal_tracker.css') }}" />
 
 	<title>Enter Progress</title>
 </head>
+
 <body>
-	<p>
-		Please enter your progress:
-	</p>
-	<p>
-		<form action="\progress" method="post">
-			Coding / Math: <input type="number" name="coding"> Hours
-			<br>
-			Reading: <input type="number" name="reading"> Completed Books
+    <section class="header">
+        <nav class="navbar navbar-dark bg-dark">
+            <div id="tag">Goal Tracker</div>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Progress</a>
+                    </li>
+                </ul>
+                <span class="navbar-text">
+                Progress at what costs?
+                </span>
+            </div>
+        </nav>
+    </section>
+    <section class="jumbotron">
+        <form action="\progress" method="post">
+    	    <div class="form-row">
+                <label for="coding" class="col-sm-3 col-form-label">Coding/Math (hours):</label>
+                <div class="col-sm-1">
+                    <input class="form-control">
+                </div>  
+            </div>  
+            <br> 
+            <div class="form-row">
+                <label for="reading" class="col-sm-3 col-form-label">Reading (completed books):</label>
+                <div class="col-sm-1">
+                    <input class="form-control">
+                </div>  
+            </div>   
+            <br>
+            <div class="form-row">
+                <label for="exercise" class="col-sm-3 col-form-label">Exercise (# of times):</label>
+                <div class="col-sm-1">
+                    <input class="form-control">
+                </div>  
+            </div>   
+            <br>//
+            <div class="form-row">
+                <label for="savings" class="col-sm-3 col-form-label">Savings (dollars):</label>
+                <div class="col-sm-1">
+                    <input class="form-control">
+                </div>  
+            </div>   
+            <br>
+        </form>
+    </section>
+
+
+
+		<!--	Reading: <input type="number" name="reading"> Completed Books
 			<br>
 			Exercise: <input type="number" name="exercise"> Times
 			<br>
@@ -30,14 +78,14 @@
 			<br>
 			<input type="submit" name="submit">
 		</form>
-	</p>
-	<p>
+    </div> -->
+	<section class="footer">
 		<form action="\progress" method="get">
 			Or check on your progress!
 			<br>
 			<input type="submit" name="progress" value="My Progress">
 		</form>
-	</p>
+	</section>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

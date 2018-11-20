@@ -1,0 +1,28 @@
+/* My CSS file (to override the bootstrap css) */
+/*FFAAAA   D46A6A   801515   550000  AA3939 color palette */
+
+thead {
+    color: #AA3939;
+}
+
+.header { 
+    background-color: black;
+    color: gainsboro;
+    text-align: center;
+    font-family: Avantgarde; 
+}
+
+.jumbotron {
+    background-image: url("../img/moon.jpeg");
+    background-size: contain;
+}
+
+.col-sm-3 {
+    text-align: right;
+    background-color: black;
+    color: white;
+}
+
+.footer {
+
+}
